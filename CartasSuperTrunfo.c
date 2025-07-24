@@ -10,18 +10,19 @@ int main() {
 
    int carta1;
 
-   char estado = 'A';
+   char estado[30];
    char codigo[10];
-   char nome[20];
-   int populaçao;
+   char nome[50];
+   unsigned long int populaçao;
    float area;
    float pib;
    int pontoturistico;
    float Densidade;
    float Percapita;
+   float superpoder;
 
    printf("Digite o Estado: \n");
-   scanf("%c", &estado);
+   scanf("%s", &estado);
 
    printf("Digite o Código da carta: \n");
    scanf("%s", &codigo);
@@ -43,7 +44,7 @@ int main() {
 
    printf("Carta1\n", carta1);
 
-   printf("Estado: %c\n", estado);
+   printf("Estado: %s\n", estado);
    printf("Código da carta: %s\n", codigo);
    printf("Nome da cidade: %s\n", nome);
    printf("População: %d\n", populaçao);
@@ -59,18 +60,19 @@ int main() {
 
    int carta2;
 
-   char estado2 = 'B';
+   char estado2[30];
    char codigo2[10];
-   char nome2[20];
-   int populaçao2;
+   char nome2[50];
+   unsigned long int populaçao2;
    float area2;
    float pib2;
    int pontoturistico2;
    float densidade2;
    float percapita2;
+   float superpoder2;
 
    printf("Digite o Estado: \n");
-   scanf("%c", &estado2);
+   scanf("%s", &estado2);
 
    printf("Digite o Código da carta: \n");
    scanf("%s", &codigo2);
@@ -92,7 +94,7 @@ int main() {
 
    printf("Carta2\n", carta2);
    
-   printf("Estado: %c\n", estado2);
+   printf("Estado: %s\n", estado2);
    printf("Código da carta: %s\n", codigo2);
    printf("Nome da cidade: %s\n", nome2);
    printf("População: %d\n", populaçao2);
@@ -105,6 +107,17 @@ int main() {
 
    printf("Densidade populacional: %.2f hab.Km²\n", densidade2);
    printf("PIB Per Capita: %.2f reais\n", percapita2);
+
+   superpoder = (populaçao + area + pib + Percapita / Densidade);
+   superpoder2 = (populaçao2 + area2 + pib2 + percapita2 / densidade2);
+
+   printf("População: %d\n", populaçao > populaçao2);
+   printf("Área: %d\n", area > area2);
+   printf("PIB: %d\n", pib > pib2);
+   printf("Número de pontos turísticos: %d\n", pontoturistico > pontoturistico2);
+   printf("Densidade populacional: %d hab.Km²\n", Densidade < densidade2);
+   printf("PIB Per Capiata: %d reais\n", Percapita > percapita2);
+   printf("Super Poder: %d", superpoder > superpoder2);
 
 
   
